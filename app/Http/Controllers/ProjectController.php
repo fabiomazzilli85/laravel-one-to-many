@@ -44,6 +44,12 @@ class ProjectController extends Controller
         return view('projects.index', compact('projects'));
     }
 
+    public function create()
+    {
+        return view('projects.create');
+    }
+
+
     public function update(Request $request, Project $project)
     {
         $request->validate([
