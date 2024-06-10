@@ -16,6 +16,9 @@
         <ul>
             @foreach ($projects as $project)
                 <li>{{ $project->name }}</li>
+                <li>{{ $project->web_site }}</li>
+                <li>{{ $project->slug }}</li>
+                <li class="mb-5">{{ $project->description }}</li>
             @endforeach
         </ul>
     </div>
