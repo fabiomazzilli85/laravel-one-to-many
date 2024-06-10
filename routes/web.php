@@ -10,6 +10,8 @@ Route::get('/', function () {
 });
 
 Route::resource('projects', ProjectController::class);
+Route::get('/projects/create', [ProjectController::class, 'create'])->name('projects.create');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
