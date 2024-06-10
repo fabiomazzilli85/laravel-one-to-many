@@ -14,5 +14,9 @@ class Project extends Model
         'slug', // Aggiunto slug
         'description',
     ];
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
+    }
 }
 
