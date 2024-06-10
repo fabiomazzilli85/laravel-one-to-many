@@ -18,9 +18,23 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
+                    <!-- Aggiungi i collegamenti qui -->
+                    <div class="mt-4">
+                        <a href="{{ route('projects.create') }}" class="btn btn-primary">Create Project</a>
+                        <a href="{{ route('projects.index') }}" class="btn btn-secondary">View Projects</a>
+                        <a href="{{ route('profile.edit') }}" class="btn btn-info">Update Profile</a>
+                        <form action="{{ route('profile.destroy') }}" method="POST" style="display: inline-block;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete your profile?')">Delete Profile</button>
+                        </form>
+                    </div>
+                    <!-- Fine collegamenti -->
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
+
