@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1>Crea Nuovo Progetto</h1>
+    <h1 class="text-center text-success my-5">Crea Nuovo Progetto</h1>
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -41,7 +41,7 @@
                 @endforeach
             </select>
         </div>
-        <button type="submit" class="btn btn-primary">Salva</button>
+        <button type="submit" class="btn btn-primary mt-5">Salva</button>
     </form>
 </div>
 @endsection
