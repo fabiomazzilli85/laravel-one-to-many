@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Type;
 use Illuminate\Http\Request;
 use App\Models\Project;
 use Illuminate\Support\Facades\Auth;
@@ -46,7 +47,8 @@ class ProjectController extends Controller
 
     public function create()
     {
-        return view('projects.create');
+        $types = Type::all(); // Recupera tutti i tipi di progetto
+        return view('projects.create', compact('types'));
     }
 
 
